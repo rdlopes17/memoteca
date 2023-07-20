@@ -1,6 +1,5 @@
 {
   "pensamentos": [
-
       {
         "id": 1,
         "conteudo": "Teste de bakend fake",
@@ -26,16 +25,16 @@
         "modelo": "modelo1"
       },
       {
-        "id": 3,
+        "id": 5,
         "conteudo": "Modificação do arquivo package.json na seção (scripts: {}) ",
         "autoria": "Angular",
         "modelo": "modelo2"
       },
       {
-        "id": 3,
+        "id": 6,
         "conteudo": "(start: json-server --watch db.json --port 3000)",
         "autoria": "Angular",
-        "modelo": "modelo2"
+        "modelo": "modelo3"
       }
   ]
 }
