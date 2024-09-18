@@ -15,12 +15,12 @@ export class PensamentoService {
     let params = new HttpParams()
       .set('_page', pagina)
       .set('_limit', itesPorPagina);
-    
+
     if (filtro.trim().length > 2) {
-      params = params.set("q", filtro)
+      params = params.set('q', filtro);
     }
     // return this.http.get<Pensamento[]>(this.API); retorno simples
-    return this.http.get<Pensamento[]>(this.API,{params})
+    return this.http.get<Pensamento[]>(this.API, { params });
   }
 
   criar(pensamento: Pensamento): Observable<Pensamento> {
@@ -30,6 +30,13 @@ export class PensamentoService {
   ediar(pensamento: Pensamento): Observable<Pensamento> {
     const url = `${this.API}/${pensamento.id}`;
     return this.http.put<Pensamento>(url, pensamento);
+  }
+
+  mudarFavorito(pensamento: Pensamento): Observable<Pensamento> {
+    pensamento.favorito = !pensamento.favorito;
+    // const url = `${this.API}/${pensamento.id}`;  para evitar a repeticao de codigo podemos usar a chamada do metodo editar
+    // return this.http.put<Pensamento>(url, pensamento);
+    return this.ediar(pensamento);
   }
 
   excluir(id: number): Observable<Pensamento> {
