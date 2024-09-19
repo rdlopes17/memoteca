@@ -50,9 +50,9 @@ export class ListarPensamentoComponent implements OnInit {
   recarregarComponente() {
     this.favoritos = false;
     this.paginaAtual = 1;
-    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-    this.router.onSameUrlNavigation = 'reload';
-    this.router.navigate([this.router.url]);
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;//defino que nao quero a reutilizacao padrao do roteador.
+    this.router.onSameUrlNavigation = 'reload';//navegando com a mesma url oque deve acontecer 
+    this.router.navigate([this.router.url]);//representa a url atual
   }
 
   listarFavoritos() {
