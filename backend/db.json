@@ -12,14 +12,14 @@
       "conteudo": "Criado com o comando npm init -y",
       "autoria": "Angular",
       "modelo": "modelo2",
-      "favorito": true
+      "favorito": false
     },
     {
       "id": 3,
       "conteudo": "Instalado com o comando npm i josn-server",
       "autoria": "angular",
       "modelo": "modelo2",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": 4,
@@ -48,6 +48,13 @@
       "modelo": "modelo3",
       "favorito": false,
       "id": 7
+    },
+    {
+      "conteudo": "teste de chamada do backend",
+      "autoria": "usuario",
+      "modelo": "modelo2",
+      "favorito": false,
+      "id": 8
     }
   ]
 }
